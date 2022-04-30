@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 // import { propTypes } from 'react-bootstrap/esm/Image';
 import TransactionRow from './TransactionRow';
 import TransactionForm from './TransactionForm';
-
 /**
  * Shows a table of transactions and optionally a form for creating a transaction
 *Added props to the TransactionTable component that allows filtering by:
@@ -18,7 +17,6 @@ it may not be set at all, in which case the table should show everything.
 
  * @component
  * @example
- * <TransactionTable isCreating onStopCreating={() => alert('finished')} />
  */
 
 // added filters
