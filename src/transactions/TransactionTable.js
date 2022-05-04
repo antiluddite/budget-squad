@@ -2,7 +2,6 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { v4 as uuid } from 'uuid';
 import { useSelector } from 'react-redux';
-// import { propTypes } from 'react-bootstrap/esm/Image';
 import TransactionRow from './TransactionRow';
 import TransactionForm from './TransactionForm';
 /**
@@ -10,13 +9,15 @@ import TransactionForm from './TransactionForm';
 *Added props to the TransactionTable component that allows filtering by:
 start date (inclusive),end date (inclusive), category, payee (name).
 
-// "filters" is prop name for now
-// The "filters" prop is optional,
-it may not be set at all, in which case the table should show everything.
-// "filters" prop may be missing or set to null, and those should be ignored.
-
  * @component
  * @example
+ * Can filter with all, combination, or ("" or null) of these "filters" properites
+ * {
+    startDate: null,
+    endDate: null,
+    categoryId: null,
+    payee: null
+}
  */
 
 // added filters
@@ -65,7 +66,7 @@ TransactionTable.propTypes = {
     payee: PropTypes.string,
     startDate: PropTypes.number,
     endDate: PropTypes.number,
-  }).isRequired,
+  }),
   // date: new Date(formData.date)
   /**
    * Is a transaction currently being created - shows the creating form
